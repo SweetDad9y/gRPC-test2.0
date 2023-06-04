@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package test;
+
+option go_package = "./protogen";
+
+service SayHello {
+    rpc Say(SayRequest) returns (SayResponse) {}
+}
+
+message SayRequest {
+    string request = 1;
+}
+
+message SayResponse {
+    string response = 2;
+}
+
